@@ -1,0 +1,1 @@
+compose: gitea-postgres/docker-compose.yaml
