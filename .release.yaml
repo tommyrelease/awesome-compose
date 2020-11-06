@@ -1,0 +1,1 @@
+compose: elasticsearch-logstash-kibana/docker-compose.yml
