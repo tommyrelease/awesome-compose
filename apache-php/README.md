@@ -1,3 +1,6 @@
+## Verified to work in Release
+To make this project work in Release, we had to add a COPY command to the Dockerfile in app/Dockerfile to copy index.php into the container. When run locally, docker-compose creates an overlay filesystem and uses files in the directory, but when run in a hosted environment we need to be explicit and ensure that this file is copied into the container.
+
 ## Compose sample application
 ### PHP application with Apache2
 
