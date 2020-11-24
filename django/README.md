@@ -1,3 +1,6 @@
+## Verified to work in Release
+In order to make this project work in Release, we had to allow hosts on * in app/example/settings.py on line 37. This allows incoming connections from any host.
+
 ## Compose sample application
 ### Django application in dev mode
 
