@@ -1,3 +1,6 @@
+## Verified to work in Release
+No modifications to this project were necessary.
+
 ## Compose sample application: ASP.NET with MS SQL server database
 
 Project structure:
