@@ -1,3 +1,6 @@
+## Verified to work in Release
+No modifications were necessary for this project to run in Release.
+
 ## Compose sample application
 ### Python/Flask application
 
