@@ -1,3 +1,34 @@
+## Verified to work in Release
+No modifications were necessary for this project to run in Release. However, in the Release Application Template it is necessary to adjust a few things. 
+
+First, create an ELB to expose port 25565 with a simple hostname under the minecraft service. The minecraft service section of your Application Template should look like this:
+
+```
+services:
+- name: minecraft
+  image: itzg/minecraft-server
+  ports:
+  - port: '25565'
+    type: node_port
+    target_port: '25565'
+    loadbalancer: true
+  hostname: minecraft-${env_id}-lb-${domain}
+```
+This will expose port 25565 directly via an ELB to the Internet.
+
+You should also increase the memory available for this container in Release by editing the resources section of your Applicaiton Template. In this example I've used 3Gb.
+
+```
+resources:
+  cpu:
+    limits: 1000m
+    requests: 100m
+  memory:
+    limits: 3Gi
+    requests: 100Mi
+  replicas: 1
+```
+
 ## Minecraft server
 This example defines a basic setup for a Minecraft server. More details on the Minecraft server docker image can be found [here](https://github.com/itzg/docker-minecraft-server/blob/master/README.md).
 
