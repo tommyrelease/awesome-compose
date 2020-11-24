@@ -1,3 +1,6 @@
+## Verified to work in Release
+To make this project work in release, we had to add --disableHostCheck=true to Dockerfile in angular/Dockerfile line 10. This instructs ng to let any host connect to the server. In the local docker-compose implementation it assumed localhost. 
+
 ## Compose sample 
 ### Angular service
 
